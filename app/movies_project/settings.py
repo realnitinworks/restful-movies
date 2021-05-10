@@ -129,3 +129,12 @@ STATIC_URL = '/static/'
 
 # Custom User Model
 AUTH_USER_MODEL = 'movies.CustomUser'
+
+
+# Disable browsable API in production
+if not DEBUG:
+    REST_FRAMEWORK = {
+        "DEFAULT_RENDERER_CLASSES": (
+            "rest_framework.renderers.JSONRenderer",
+        )
+    }
