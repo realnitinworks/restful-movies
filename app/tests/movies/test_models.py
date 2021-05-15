@@ -1,6 +1,5 @@
 import pytest
 
-
 from movies.models import Movie
 
 
