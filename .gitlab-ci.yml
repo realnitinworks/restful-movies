@@ -45,7 +45,7 @@ test:
 deploy:
   stage: deploy
   services:
-    docker:dind
+    - docker:dind
   variables:
     DOCKER_DRIVER: overlay2
     HEROKU_APP_NAME: shrouded-sands-90103
